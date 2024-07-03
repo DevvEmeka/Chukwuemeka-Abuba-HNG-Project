@@ -1,108 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chukwuemeka Abuba Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 
     <!--boxicons link-->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
 
     <!--google fonts link-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
     <!--header section-->
     <header>
-      <div>
-        <a href="#" class="logo"><span>Chukwu</span>emeka</a>
-      </div>
+        <div>
+            <a href="#" class="logo"><span>Chukwu</span>emeka</a>
+        </div>
 
-      <ul class="navbar">
-        <li><a href="#">Home</a></li>
-        <li><a href="http://hng.tech/learn." Attribute: data-testid="hngLink" class="active">Contacts</a></li>
-        <li><a href="http://keyword.dog" Attribute: data-testid="keywordLink">About</a></li>
-        <li><a href=" http://scrapeanyweb.site" Attribute: data-testid="scrapeanywebLink">Services</a></li>
-        <li><a href="#">Contacts</a></li>
-      </ul>
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="http://hng.tech/learn." Attribute: data-testid="hngLink" class="active">Contacts</a></li>
+            <li><a href="http://keyword.dog" Attribute: data-testid="keywordLink">About</a></li>
+            <li><a href=" http://scrapeanyweb.site" Attribute: data-testid="scrapeanywebLink">Services</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
 
-      <div class="menu-btn">
-        <div>HNG 2024</div>
-        <div class="bx bx-menu" id="menu-icon"></div>
-      </div>
+        <div class="menu-btn">
+            <div>HNG 2024</div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
     </header>
 
     <!--home section-->
     <section class="home">
-      <div class="home-text">
-        <span>Software Developer</span>
-        <!-- Slack Display Name -->
-        <h1 data-testid="slackDisplayName">Chukwuemeka Abuba</h1>
-        <p>
-          I am a Software engineer and a technical writer. When I am not coding,
-          I play video games
-        </p>
-        <div class="main-btn">
-          <a href="#" class="btn">Download CV</a>
-          <a href="#" class="btn two">Hire Me Now</a>
+        <div class="home-text">
+            <span>Software Developer</span>
+            <!-- Slack Display Name -->
+            <h1 data-testid="slackDisplayName">Chukwuemeka Abuba</h1>
+            <!--Two years plan-->
+            <div class="plan-cover">
+                <h3 class="plan-header">My Two-Year Plan as a Software Engineer</h3>
+                <ol class="plan-list">
+                    <li>Complete advanced coursework in algorithms and data structures.</li>
+                    <li>Contribute to open-source projects on GitHub.</li>
+                    <li>Build and deploy a personal project using React and Node.js.</li>
+                    <li>Attend tech conferences and networking events.</li>
+                    <li>Upskill to become a cloud engineer.</li>
+                </ol>
+            </div>
+            <div class="main-btn">
+                <a href="#" class="btn">Download CV</a>
+                <a href="#" class="btn two">Hire Me Now</a>
+            </div>
         </div>
-      </div>
 
-      <div class="home-img">
-        <img
-          class="asset-img"
-          src="./assets/CapIMG_0037.jpeg.jpg"
-          width="100%"
-          height="100%"
-          alt="Slack Profile Picture"
-          data-testid="slackProfilePicture"
-        />
-      </div>
+        <div class="home-img">
+            <img class="asset-img" src="./assets/CapIMG_0037.jpeg.jpg" width="100%" height="100%"
+                alt="Slack Profile Picture" data-testid="slackProfilePicture" />
+        </div>
     </section>
 
     <div class="share">
-      <p>Check Out my:</p>
-      <div class="social">
-        <a href="#"
-          ><box-icon type="logo" name="twitter">
-            <div data-testid="slackEmail">devemeka@outlook.com</div></box-icon
-          >
-        </a>
+        <p>Check Out:</p>
+        <div class="social">
+            <div class="current-email" data-testid="slackEmail">devemeka@outlook.com</div>
 
-        <a href="#"
-          ><box-icon type="logo" name="linkedin">
             <!-- Current Day of the Week -->
-            <div data-testid="currentDay">
-              <script>
-                document.addEventListener("DOMContentLoaded", () => {
-                  const currentDayElement = document.querySelector(
-                    '[data-testid="currentDay"]'
-                  );
-                  const updateDay = () => {
-                    const now = new Date();
-                    const dayString = now.toLocaleString("en-US", {
-                      weekday: "long",
+            <div class="current-time" data-testid="currentDay">
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const currentDayElement = document.querySelector(
+                            '[data-testid="currentDay"]'
+                        );
+                        const updateDay = () => {
+                            const now = new Date();
+                            const dayString = now.toLocaleString("en-US", {
+                                weekday: "long",
+                            });
+                            currentDayElement.innerText = dayString;
+                        };
+                        updateDay();
                     });
-                    currentDayElement.innerText = dayString;
-                  };
-                  updateDay();
-                });
-              </script>
+                </script>
             </div>
-          </box-icon></a
-        >
 
-        <a href="#"><box-icon type="logo" name="medium">
-            <div data-testid="currentTimeUTC">
+            <!-- Current timeUTC -->
+            <div class="current-utc" data-testid="currentTimeUTC">
                 <script>
                     document.addEventListener("DOMContentLoaded", () => {
                         const currentTimeElement = document.querySelector('[data-testid="currentTimeUTC"]');
@@ -116,13 +106,11 @@
                     });
                 </script>
             </div>
-        </box-icon></a>
-
-        <a href="#"><box-icon type="logo" name="medium"></box-icon></a>
-      </div>
+        </div>
     </div>
 
     <!--custom js file link-->
     <script src="logic.js"></script>
-  </body>
+</body>
+
 </html>
